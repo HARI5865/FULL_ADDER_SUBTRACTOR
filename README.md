@@ -42,16 +42,53 @@ Borrow out = A'Bin + A'B + BBin
 
 Write the detailed procedure here
 
-**Program:**
+**Program:**<br>
+module exp4 a(df, bo, a, b, bin);<br>
+ output df;<br>
+ output bo;<br>
+ input a;<br>
+ input b;<br>
+ input bin;<br>
+ wire w1,w2,w3;<br>
+ assign w1=a^b;<br>
+ assign w2=(~a&b);<br>
+ assign w3=(~w1&bin);<br>
+ assign df=w1^bin;<br>
+ assign bo-w2/w3;<br>
+ endmodule<br>
+module exp4a (df, bo, a, b, bin);<br>
+ output df;<br>
+ output bo;<br>
+ input a;<br>
+ input b;<br>
+ input bin;<br>
+ wire w1,w2, w3;<br>
+ assign w1=a^b;<br>
+ assign w2=(~a&b);<br> 
+ assign w3=(~w1&bin);<br>
+ assign df=w1^bin;<br>
+ assign bo=w2|w3;<br>
+ endmodule<br>
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
+Developed by:HARIHARASUDHAN N RegisterNumber:*/24900208
 
-**RTL Schematic**
+**RTL Schematic**<br>
+Full adder<br>
+![385154484-0c67dfbc-ce03-41dd-917e-e802f122aa69](https://github.com/user-attachments/assets/2185cf58-d5b3-405d-9d0b-570ead6f7068)
+Full sbtracter<br>
+![385154932-c637d884-caf0-499c-89e3-a391eb05b433](https://github.com/user-attachments/assets/d6392d9a-0b7a-402b-89c5-0c4fea7f6b88)
 
-**Output Timing Waveform**
 
-**Result:**
+
+**Output Timing Waveform**<br>
+Output Timing Waveform Full adder<br>
+![385155287-a299f5fd-90d9-4b80-82ff-91d5a507ed35](https://github.com/user-attachments/assets/2fb3e4e8-83b9-4aa8-9f86-8344282d92be)
+Full sbtracter
+![385155358-ca015316-dcf1-4f01-a8ff-e51401190fc2](https://github.com/user-attachments/assets/f702cb1c-80a0-417e-92f4-b9c4602143ed)
+
+
+**Result:**<br>
 
 Thus the Full Adder and Full Subtractor circuits are designed and the truth tables is verified using Quartus software.
 
